@@ -1,0 +1,34 @@
+﻿<Window x:Class="UsReg.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsReg"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Приложение регистрации" Height="400" Width="800">
+    <Grid Background="AliceBlue">
+        <Border MinWidth="400" Margin="15" Background="#FFFF" 
+                VerticalAlignment="Center" Padding="40" MaxWidth="550" 
+                CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray"
+                                  ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold"
+                           Margin="0 0 0 20" />
+                <Grid Margin="0 0 0 20">
+                    <Button Click="Button_Reg_Click" HorizontalAlignment="Left" Content="Регистрация" />
+                    <Button HorizontalAlignment="Right" Content="Войти" 
+                            Style="{StaticResource MaterialDesignFlatButton}" />
+                </Grid>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <PasswordBox x:Name="PasssBox1" materialDesign:HintAssist.Hint="Введите паоль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+
+                <Button Content="Войти в кабинет" x:Name="regButton" Margin="0 20" Click="Button_Auth_Click"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
